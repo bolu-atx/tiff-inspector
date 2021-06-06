@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 3.11)
 
+
 # --- Fetch FTXUI --------------------------------------------------------------
 include(FetchContent)
 
@@ -17,21 +18,27 @@ endif()
 
 # ------------------------------------------------------------------------------
 
-project(ftxui-starter
+project(tiff-inspector
   LANGUAGES CXX
   VERSION 1.0.0
 )
 
-add_executable(ftxui-starter src/main.cpp)
-target_include_directories(ftxui-starter PRIVATE src)
+# -- set system arch ----
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-march=native" COMPILER_SUPPORTS_MARCH_NATIVE)
+if(COMPILER_SUPPORTS_MARCH_NATIVE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+endif()
+add_executable(tiff-inspector src/main.cpp)
 
-target_link_libraries(ftxui-starter
+target_include_directories(tiff-inspector PRIVATE src)
+
+target_link_libraries(tiff-inspector
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom
   PRIVATE ftxui::component # Not needed for this example.
 )
 
 # C++17 is used. We requires fold expressions at least.
-set_target_properties(ftxui-starter PROPERTIES CXX_STANDARD 17)
-
-install(TARGETS ftxui-starter RUNTIME DESTINATION "bin")
+set_target_properties(tiff-inspector PROPERTIES CXX_STANDARD 17)
+install(TARGETS tiff-inspector RUNTIME DESTINATION "bin")

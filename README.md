@@ -1,9 +1,9 @@
-ftxui-starter
+tiff-inspector
 -------------
 
-[![Snap Status](https://build.snapcraft.io/badge/ArthurSonzogni/ftxui-starter.svg)](https://build.snapcraft.io/user/ArthurSonzogni/ftxui-starter)
+[![Snap Status](https://build.snapcraft.io/badge/ArthurSonzogni/tiff-inspector.svg)](https://build.snapcraft.io/user/ArthurSonzogni/tiff-inspector)
 
-[![Build Status](https://travis-ci.com/ArthurSonzogni/ftxui-starter.svg?branch=master)](https://travis-ci.com/ArthurSonzogni/ftxui-starter)
+[![Build Status](https://travis-ci.com/ArthurSonzogni/tiff-inspector.svg?branch=master)](https://travis-ci.com/ArthurSonzogni/tiff-inspector)
 
 Minimal starter project using the [FTXUI library](https://github.com/ArthurSonzogni/ftxui)
 

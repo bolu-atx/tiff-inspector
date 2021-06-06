@@ -1,4 +1,4 @@
-name: ftxui-starter
+name: tiff-inspector
 version: '1.0.0'
 summary: A simple starter project for the FTXUI library.
 description: A simple starter project for the FTXUI library.
@@ -8,13 +8,13 @@ confinement: strict
 base: core18
 
 apps:
-  ftxui-starter:
-    command: ftxui-starter
+  tiff-inspector:
+    command: tiff-inspector
 
 parts:
-  ftxui-starter:
+  tiff-inspector:
     plugin: cmake
-    source: https://github.com/ArthurSonzogni/ftxui-starter
+    source: https://github.com/ArthurSonzogni/tiff-inspector
     source-type: git
     source-depth: 1
     build-snaps: [cmake/latest/edge] # We need cmake >= 3.11
@@ -27,5 +27,5 @@ parts:
       make install
 
 passthrough:
-  title: ftxui-starter
+  title: tiff-inspector
   license: MIT
